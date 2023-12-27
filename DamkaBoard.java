@@ -6,7 +6,7 @@ public class DamkaBoard {
 				if(i%2!=0 && j==0){
 					System.out.print(" ");
 				}
-					System.out.print(" * ");
+					System.out.print("* ");
 			}
 			System.out.println();
 		}
