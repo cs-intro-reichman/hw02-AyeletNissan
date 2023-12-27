@@ -3,7 +3,6 @@ public class OneOfEach {
 		double firstBorn = Math.random();
 		double girlorboy= Math.random();
 		int sum=1;
-
 		if(firstBorn>=0 && firstBorn<0.5){
 			System.out.print("g ");
 			while (girlorboy>=0 && girlorboy<0.5) {

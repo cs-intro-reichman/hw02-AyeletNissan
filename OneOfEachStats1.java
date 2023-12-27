@@ -1,8 +1,8 @@
 public class OneOfEachStats1 {
 	public static void main (String[] args) {
 		int familiesNum = Integer.parseInt(args[0]);
-		int firstBorn = (int)(2*Math.random()+1);
-		int girlorboy=(int)(2*Math.random()+1);
+		double firstBorn = Math.random();
+		double girlorboy= Math.random();
 		int sum=1;
 
 		double average=0;
@@ -11,16 +11,16 @@ public class OneOfEachStats1 {
 		int fourormorekids=0;
 
 		for(int i=0; i<familiesNum; i++){
-			if(firstBorn%2==0){
-		  	     while (girlorboy%2!=0) {
+			if(firstBorn>=0 && firstBorn<0.5){
+		  	     while (girlorboy>0 && girlorboy<0.5) {
 				    sum++;
-				    girlorboy = (int)(2*Math.random()+1);
+				    girlorboy = Math.random();
 			    }
 			    sum++;
 		    } else {
-			     while (girlorboy%2==0) {
+			     while (girlorboy>=0.5 && girlorboy<1) {
 				    sum++;
-			    	girlorboy = (int)(2*Math.random()+1);
+			    	girlorboy = Math.random();
 		    	}
 			     sum++;
 		    }
@@ -28,6 +28,8 @@ public class OneOfEachStats1 {
 			if(sum==2) twokids++;
 			if(sum==3) treekids++;
 			if(sum>=4) fourormorekids++;
+			firstBorn = Math.random();
+			sum =1;
 		}
 
 		System.out.println("Average: "+ average/familiesNum + " children to get at least one of each gender.");
