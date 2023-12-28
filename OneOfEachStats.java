@@ -45,6 +45,7 @@ public class OneOfEachStats {
 			if(sum==3) treekids++;
 			if(sum>=4) fourormorekids++;
 			firstBorn = generator.nextDouble();
+			girlorboy = generator.nextDouble();
 			sum =1;
 		}
 

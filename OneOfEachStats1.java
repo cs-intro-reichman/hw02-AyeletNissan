@@ -29,6 +29,7 @@ public class OneOfEachStats1 {
 			if(sum==3) treekids++;
 			if(sum>=4) fourormorekids++;
 			firstBorn = Math.random();
+			girlorboy = Math.random();
 			sum =1;
 		}
 
