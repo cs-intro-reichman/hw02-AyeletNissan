@@ -53,10 +53,16 @@ public class OneOfEachStats {
 		System.out.println("Number of families with 2 children: "+ twokids);
 		System.out.println("Number of families with 3 children: "+ treekids);
 		System.out.println("Number of families with 4 or more children: "+ fourormorekids);
-		int maxin = Math.max(twokids, Math.max(treekids, fourormorekids));
-		if(maxin==twokids) System.out.println("The most common number of children is 2.");
-		if(maxin==treekids) System.out.println("The most common number of children is 3.");
-		if(maxin==fourormorekids) System.out.println("The most common number of children is 4 or more.");
+		//int maxin = Math.max(twokids, Math.max(treekids, fourormorekids));
+        if (twokids>treekids && twokids>fourormorekids) System.out.println("The most common number of children is 2.");
+		if (twokids>treekids && twokids==fourormorekids) System.out.println("The most common number of children is 2.");
+		if (twokids==treekids && twokids>fourormorekids) System.out.println("The most common number of children is 2.");
+		if (twokids==treekids && twokids==fourormorekids) System.out.println("The most common number of children is 2.");
+
+		if (treekids>twokids && treekids>fourormorekids) System.out.println("The most common number of children is 3.");
+		if (treekids>twokids && treekids==fourormorekids) System.out.println("The most common number of children is 3.");
+
+		if (fourormorekids>twokids && fourormorekids>treekids) System.out.println("The most common number of children is 4 or more.");
 		
 		//// In the previous version of this program, you used a statement like:
 		//// double rnd = Math.random();
